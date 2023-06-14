@@ -22,7 +22,8 @@ jobs:
           aws-region: us-east-1
       - name: setup terraform
         uses: hashicorp/setup-terraform@v2
-        
+        with:
+          terraform_wrapper: false
       - name: Terraform init
         id: init
         run: terraform init
